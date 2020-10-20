@@ -1,0 +1,261 @@
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1603222009.3049135,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-raghunath1986-golang-http-maste-flmkw-fffs4[0m
+{"level":"info","ts":1603222088.0876212,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/*************/golang-http.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1603222088.0877123,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1603222088.140264,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/golang-http main.go
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1020 19:28:19.962774      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] Built cross stage deps: map[]                
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] Executing 0 build triggers                   
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Checking for cached layer *********/todo/cache:876b81ddf5e805b8ace52f71ec9eb8b4c584ce452e0ccded869b6c0938f98ee5... 
+[36mINFO[0m[0011] No cached layer found for cmd COPY ./bin/ /  
+[36mINFO[0m[0011] Unpacking rootfs as cmd COPY ./bin/ / requires it. 
+[36mINFO[0m[0011] EXPOSE 8080                                  
+[36mINFO[0m[0011] cmd: EXPOSE                                  
+[36mINFO[0m[0011] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] ENTRYPOINT ["/golang-http"]                  
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] COPY ./bin/ /                                
+[36mINFO[0m[0011] Resolving 2 paths                            
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0011] Pushing layer *********/todo/cache:876b81ddf5e805b8ace52f71ec9eb8b4c584ce452e0ccded869b6c0938f98ee5 to cache now 
+[33mWARN[0m[0012] error uploading layer to cache: failed to push to destination *********/todo/cache:876b81ddf5e805b8ace52f71ec9eb8b4c584ce452e0ccded869b6c0938f98ee5: HEAD https://index.*********/v2/todo/cache/blobs/sha256:448a4f5547a99b38a0136cd1dd93df4d0a469c90bf58164f35b7043b5a9af15a: unsupported status code 401 
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/golang-http to an unshallow repository
+Generating change log from git ref ba0c7282cb0e8f190c580b9452b9a285f6d34ff3 => 7e837c6f5d0e9e7ec17c64cf2e07ba921e838b00
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for *************/golang-http and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/*************/golang-http/releases/tag/v0.0.1
+generated: /workspace/source/charts/golang-http/templates/release.yaml
+Created Release golang-http-0-0-1 resource in namespace **
+Updating PipelineActivity *************-golang-http-master-1 with version 0.0.1
+Updated PipelineActivities *************-golang-http-master-1 with release notes URL: https://github.com/*************/golang-http/releases/tag/v0.0.1
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file golang-http-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mraghunath1986-golang-http-maste-flmkw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app golang-http version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+Added label updatebot to Pull Request https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*************/environment-jenkins-x-rke-staging/pull/1 ref 1aa7b8850d331233ea0dd3c4f0a16f576b4e36b5 Could not find a status for repository *************/environment-jenkins-x-rke-staging with ref 1aa7b8850d331233ea0dd3c4f0a16f576b4e36b5
+WARNING: Failed to query the Pull Request last commit status for https://github.com/*************/environment-jenkins-x-rke-staging/pull/1 ref 1aa7b8850d331233ea0dd3c4f0a16f576b4e36b5 Could not find a status for repository *************/environment-jenkins-x-rke-staging with ref 1aa7b8850d331233ea0dd3c4f0a16f576b4e36b5
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
+got git provider status pending from PR https://github.com/*************/environment-jenkins-x-rke-staging/pull/1
